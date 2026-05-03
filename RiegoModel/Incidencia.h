@@ -6,8 +6,10 @@
 #ifndef _INCIDENCIA_H
 #define _INCIDENCIA_H
 #include "Operario.h"
-#include "ZonaIrrigacion.h"
+#include "Direccion.h"
 #include "Supervisor.h"
+#include "Suelo.h"
+
 
 using namespace System;
 using namespace System::Collections::Generic;
@@ -25,7 +27,7 @@ namespace RiegoModel {
         property DateTime fechaReporte;
         property String^ estado;
         property Operario^ operarioReporta;
-        property ZonaIrrigacion^ zonaAfectada;
+        property Direccion^ zonaAfectada;
         property Supervisor^ supervisorAsignado;
     };
 }

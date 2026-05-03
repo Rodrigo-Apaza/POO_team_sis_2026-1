@@ -5,7 +5,7 @@
 
 #ifndef _REGISTROACTIVIDAD_H
 #define _REGISTROACTIVIDAD_H
-#include "user.h";
+#include "user.h"
 
 using namespace System;
 using namespace System::Collections::Generic;

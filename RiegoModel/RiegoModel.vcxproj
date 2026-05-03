@@ -123,6 +123,7 @@
     <ClInclude Include="ConfiguracionSistema.h" />
     <ClInclude Include="ControladorHardware.h" />
     <ClInclude Include="Hardware.h" />
+    <ClInclude Include="Suelo.h" />
     <ClInclude Include="Incidencia.h" />
     <ClInclude Include="Operario.h" />
     <ClInclude Include="pch.h" />
@@ -135,7 +136,7 @@
     <ClInclude Include="Supervisor.h" />
     <ClInclude Include="user.h" />
     <ClInclude Include="ValvulaRiego.h" />
-    <ClInclude Include="ZonaIrrigacion.h" />
+    <ClInclude Include="Direccion.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Administrador.cpp" />
@@ -156,10 +157,11 @@
     <ClCompile Include="RegistroActividad.cpp" />
     <ClCompile Include="RiegoModel.cpp" />
     <ClCompile Include="SensorHumedad.cpp" />
+    <ClCompile Include="Suelo.cpp" />
     <ClCompile Include="Supervisor.cpp" />
     <ClCompile Include="user.cpp" />
     <ClCompile Include="ValvulaRiego.cpp" />
-    <ClCompile Include="ZonaIrrigacion.cpp" />
+    <ClCompile Include="Direccion.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="app.rc" />
