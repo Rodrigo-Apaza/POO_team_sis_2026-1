@@ -5,5 +5,4 @@
   </Configurations>
   <Project Path="RiegoGUIApp/RiegoGUIApp.vcxproj" />
   <Project Path="RiegoModel/RiegoModel.vcxproj" />
-  <Project Path="RiegoPersistance/RiegoPersistance.vcxproj" />
 </Solution>
