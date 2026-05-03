@@ -1,0 +1,24 @@
+﻿  pch.cpp
+  Administrador.cpp
+  AssemblyInfo.cpp
+  ConfiguracionSistema.cpp
+  ControladorHardware.cpp
+  Hardware.cpp
+  Incidencia.cpp
+  Operario.cpp
+  Plantas.cpp
+  ProgramacionRiego.cpp
+  RegistroActividad.cpp
+  RiegoModel.cpp
+  SensorHumedad.cpp
+  Supervisor.cpp
+  user.cpp
+  ValvulaRiego.cpp
+C:\Users\LENOVO\source\repos\RiegoSolution\RiegoModel\RegistroActividad.h(8,10): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
+  (compiling source file '/RegistroActividad.cpp')
+  
+  ZonaIrrigacion.cpp
+  Generando código...
+  .NETFramework,Version=v4.8.AssemblyAttributes.cpp
+  Administrador.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+  RiegoModel.vcxproj -> C:\Users\LENOVO\source\repos\RiegoSolution\x64\Debug\RiegoModel.dll
