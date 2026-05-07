@@ -1,0 +1,13 @@
+﻿  pch.cpp
+  AssemblyInfo.cpp
+  RiegoPersistance.cpp
+C:\Users\LENOVO\source\repos\RiegoSolution\RiegoPersistance\RiegoPersistance.cpp(156,20): warning C4101: 'ex': variable local sin referencia
+  (compiling source file '/RiegoPersistance.cpp')
+  
+C:\Users\LENOVO\source\repos\RiegoSolution\RiegoPersistance\RiegoPersistance.cpp(208,20): warning C4101: 'ex': variable local sin referencia
+  (compiling source file '/RiegoPersistance.cpp')
+  
+  Generando código...
+  .NETFramework,Version=v4.8.AssemblyAttributes.cpp
+  AssemblyInfo.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+  RiegoPersistance.vcxproj -> C:\Users\LENOVO\source\repos\RiegoSolution\x64\Debug\RiegoPersistance.dll
