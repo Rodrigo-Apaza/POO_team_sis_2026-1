@@ -1,0 +1,10 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="RiegoGUIApp/RiegoGUIApp.vcxproj" />
+  <Project Path="RiegoModel/RiegoModel.vcxproj" />
+  <Project Path="RiegoPersistance/RiegoPersistance.vcxproj" />
+  <Project Path="RiegoService/RiegoService.vcxproj" />
+</Solution>
