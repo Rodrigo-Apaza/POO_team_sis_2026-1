@@ -1,4 +1,0 @@
-D:\Oscar\POO\POO_team_sis_2026-1-rama_Juan\POO_team_sis_2026-1-rama_Juan\RiegoPersistance\x64\Debug\RiegoPersistance.vcxproj.AssemblyReference.cache
-D:\Oscar\POO\POO_team_sis_2026-1-rama_Juan\POO_team_sis_2026-1-rama_Juan\RiegoPersistance\x64\Debug\RiegoPer.2C9A1ADE.Up2Date
-C:\Users\LENOVO\source\repos\RiegoSolution\RiegoPersistance\x64\Debug\RiegoPersistance.vcxproj.AssemblyReference.cache
-C:\Users\LENOVO\source\repos\RiegoSolution\RiegoPersistance\x64\Debug\RiegoPer.2C9A1ADE.Up2Date
