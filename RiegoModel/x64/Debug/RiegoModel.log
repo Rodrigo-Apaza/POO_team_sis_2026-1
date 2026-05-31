@@ -1,0 +1,23 @@
+﻿  pch.cpp
+  Administrador.cpp
+  AssemblyInfo.cpp
+  ConfiguracionSistema.cpp
+  ControladorHardware.cpp
+  Hardware.cpp
+  Incidencia.cpp
+  Operario.cpp
+  Plantas.cpp
+  ProgramacionRiego.cpp
+  RegistroActividad.cpp
+  RiegoModel.cpp
+  SensorHumedad.cpp
+  SensorTemperatura.cpp
+  Suelo.cpp
+  Supervisor.cpp
+  user.cpp
+  ValvulaRiego.cpp
+  Direccion.cpp
+  Code wird generiert...
+  .NETFramework,Version=v4.8.AssemblyAttributes.cpp
+  Administrador.obj : MSIL-Modulgefunden; inkrementelles Verknüpfen wird für MSIL deaktiviert; vollständiger Link wird durchgeführt
+  RiegoModel.vcxproj -> C:\Users\delta\Downloads\RiegoFull\x64\Debug\RiegoModel.dll
