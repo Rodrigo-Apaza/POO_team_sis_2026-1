@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ArrayOfSensorTemperatura xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SensorTemperatura>
+    <UltimoRegistro>2026-06-01T01:12:06.1560718+02:00</UltimoRegistro>
+    <EstadoOperacional>Fuera de Servicio</EstadoOperacional>
+    <Modelo>dasd</Modelo>
+    <Numero>23</Numero>
+    <Id>23</Id>
+  </SensorTemperatura>
+</ArrayOfSensorTemperatura>
