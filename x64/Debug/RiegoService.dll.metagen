@@ -1,0 +1,43 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly RiegoService, Version=1.0.*, Culture=Invariante Sprache (Invariantes Land): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly RiegoModel, Version=1.0.*, Culture=Invariante Sprache (Invariantes Land): 
+	hash=None, flags=None
+Assembly RiegoPersistance, Version=1.0.*, Culture=Invariante Sprache (Invariantes Land): 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class RiegoService.Service: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    AddUser(user): PrivateScope, Public, Static, HideBySig
+    GetAllUsers(): PrivateScope, Public, Static, HideBySig
+    GetUsersById(Int32): PrivateScope, Public, Static, HideBySig
+    UpdateUser(user): PrivateScope, Public, Static, HideBySig
+    DeleteUser(Int32): PrivateScope, Public, Static, HideBySig
+    AddSuelo(Suelo): PrivateScope, Public, Static, HideBySig
+    GetAllSuelo(): PrivateScope, Public, Static, HideBySig
+    GetSueloById(Int32): PrivateScope, Public, Static, HideBySig
+    UpdateSuelo(Suelo): PrivateScope, Public, Static, HideBySig
+    DeleteSuelo(Int32): PrivateScope, Public, Static, HideBySig
+    AddPlanta(Plantas): PrivateScope, Public, Static, HideBySig
+    UpdatePlanta(Plantas): PrivateScope, Public, Static, HideBySig
+    DeletePlanta(Int32): PrivateScope, Public, Static, HideBySig
+    QueryAllPlantas(): PrivateScope, Public, Static, HideBySig
+    QuerPlantaById(Int32): PrivateScope, Public, Static, HideBySig
+    AddSensorHumedad(SensorHumedad): PrivateScope, Public, Static, HideBySig
+    GetAllSensorHumedad(): PrivateScope, Public, Static, HideBySig
+    GetSensorHumedadById(Int32): PrivateScope, Public, Static, HideBySig
+    UpdateSensorHumedad(SensorHumedad): PrivateScope, Public, Static, HideBySig
+    DeleteSensorHumedad(Int32): PrivateScope, Public, Static, HideBySig
+    AddSensorTemperatura(SensorTemperatura): PrivateScope, Public, Static, HideBySig
+    GetAllSensorTemperatura(): PrivateScope, Public, Static, HideBySig
+    GetSensorTemperaturaById(Int32): PrivateScope, Public, Static, HideBySig
+    UpdateSensorTemperatura(SensorTemperatura): PrivateScope, Public, Static, HideBySig
+    DeleteSensorTemperatura(Int32): PrivateScope, Public, Static, HideBySig

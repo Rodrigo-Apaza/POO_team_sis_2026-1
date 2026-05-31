@@ -1,0 +1,161 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly RiegoModel, Version=1.0.*, Culture=Invariante Sprache (Invariantes Land): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class RiegoModel.user: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Byte[] Photo 'get set' : 
+    System.String Status 'get set' : 
+    System.DateTime fecharegistro 'get set' : 
+    Boolean activo 'get set' : 
+    System.String nombreusuario 'get set' : 
+    System.String correo 'get set' : 
+    System.String username 'get set' : 
+    Int32 Id   'get set' : 
+  Methods:
+    get_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Id(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_username(): PrivateScope, Public, HideBySig, SpecialName
+    set_username(String): PrivateScope, Public, HideBySig, SpecialName
+    get_correo(): PrivateScope, Public, HideBySig, SpecialName
+    set_correo(String): PrivateScope, Public, HideBySig, SpecialName
+    get_nombreusuario(): PrivateScope, Public, HideBySig, SpecialName
+    set_nombreusuario(String): PrivateScope, Public, HideBySig, SpecialName
+    get_activo(): PrivateScope, Public, HideBySig, SpecialName
+    set_activo(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_fecharegistro(): PrivateScope, Public, HideBySig, SpecialName
+    set_fecharegistro(DateTime): PrivateScope, Public, HideBySig, SpecialName
+    get_Status(): PrivateScope, Public, HideBySig, SpecialName
+    set_Status(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Photo(): PrivateScope, Public, HideBySig, SpecialName
+    set_Photo(Byte[]): PrivateScope, Public, HideBySig, SpecialName
+Class RiegoModel.Administrador: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :RiegoModel.user
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class RiegoModel.ConfiguracionSistema: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class RiegoModel.ControladorHardware: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class RiegoModel.Hardware: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class RiegoModel.Operario: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :RiegoModel.user
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String nivelAcceso 'get set' : 
+    System.String zonaAsignadaPrincipal 'get set' : 
+  Methods:
+    get_zonaAsignadaPrincipal(): PrivateScope, Public, HideBySig, SpecialName
+    set_zonaAsignadaPrincipal(String): PrivateScope, Public, HideBySig, SpecialName
+    get_nivelAcceso(): PrivateScope, Public, HideBySig, SpecialName
+    set_nivelAcceso(String): PrivateScope, Public, HideBySig, SpecialName
+Class RiegoModel.Direccion: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class RiegoModel.Supervisor: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :RiegoModel.user
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Collections.Generic.List`1[System.String] zonasAsignadas : Public
+  Properties:
+    System.String nivelAcceso 'get set' : 
+  Methods:
+    get_nivelAcceso(): PrivateScope, Public, HideBySig, SpecialName
+    set_nivelAcceso(String): PrivateScope, Public, HideBySig, SpecialName
+Class RiegoModel.Suelo: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String colorEstadoSalud 'get set' : 
+    Single nivelErosionCritico 'get set' : 
+    System.String tipoSuelo 'get set' : 
+    Int32 Id   'get set' : 
+  Methods:
+    get_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Id(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_tipoSuelo(): PrivateScope, Public, HideBySig, SpecialName
+    set_tipoSuelo(String): PrivateScope, Public, HideBySig, SpecialName
+    get_nivelErosionCritico(): PrivateScope, Public, HideBySig, SpecialName
+    set_nivelErosionCritico(Single): PrivateScope, Public, HideBySig, SpecialName
+    get_colorEstadoSalud(): PrivateScope, Public, HideBySig, SpecialName
+    set_colorEstadoSalud(String): PrivateScope, Public, HideBySig, SpecialName
+Class RiegoModel.Incidencia: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class RiegoModel.Plantas: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(Int32, System.String, Double, Double, System.String, Byte[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Byte[] Photo 'get set' : 
+    System.String Status 'get set' : 
+    Double optimalTemp 'get set' : 
+    Double optimalHumidity 'get set' : 
+    System.String plantname 'get set' : 
+    Int32 Id   'get set' : 
+  Methods:
+    get_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Id(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_plantname(): PrivateScope, Public, HideBySig, SpecialName
+    set_plantname(String): PrivateScope, Public, HideBySig, SpecialName
+    get_optimalHumidity(): PrivateScope, Public, HideBySig, SpecialName
+    set_optimalHumidity(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_optimalTemp(): PrivateScope, Public, HideBySig, SpecialName
+    set_optimalTemp(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Status(): PrivateScope, Public, HideBySig, SpecialName
+    set_Status(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Photo(): PrivateScope, Public, HideBySig, SpecialName
+    set_Photo(Byte[]): PrivateScope, Public, HideBySig, SpecialName
+Class RiegoModel.ProgramacionRiego: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class RiegoModel.RegistroActividad: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class RiegoModel.Class1: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class RiegoModel.SensorHumedad: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :RiegoModel.Hardware
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.DateTime UltimoRegistro 'get set' : 
+    System.String EstadoOperacional 'get set' : 
+    System.String Modelo 'get set' : 
+    Int32 Numero 'get set' : 
+    Int32 Id   'get set' : 
+  Methods:
+    get_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Id(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Numero(): PrivateScope, Public, HideBySig, SpecialName
+    set_Numero(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Modelo(): PrivateScope, Public, HideBySig, SpecialName
+    set_Modelo(String): PrivateScope, Public, HideBySig, SpecialName
+    get_EstadoOperacional(): PrivateScope, Public, HideBySig, SpecialName
+    set_EstadoOperacional(String): PrivateScope, Public, HideBySig, SpecialName
+    get_UltimoRegistro(): PrivateScope, Public, HideBySig, SpecialName
+    set_UltimoRegistro(DateTime): PrivateScope, Public, HideBySig, SpecialName
+Class RiegoModel.SensorTemperatura: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :RiegoModel.Hardware
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.DateTime UltimoRegistro 'get set' : 
+    System.String EstadoOperacional 'get set' : 
+    System.String Modelo 'get set' : 
+    Int32 Numero 'get set' : 
+    Int32 Id   'get set' : 
+  Methods:
+    get_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Id(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Numero(): PrivateScope, Public, HideBySig, SpecialName
+    set_Numero(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Modelo(): PrivateScope, Public, HideBySig, SpecialName
+    set_Modelo(String): PrivateScope, Public, HideBySig, SpecialName
+    get_EstadoOperacional(): PrivateScope, Public, HideBySig, SpecialName
+    set_EstadoOperacional(String): PrivateScope, Public, HideBySig, SpecialName
+    get_UltimoRegistro(): PrivateScope, Public, HideBySig, SpecialName
+    set_UltimoRegistro(DateTime): PrivateScope, Public, HideBySig, SpecialName
+Class RiegoModel.ValvulaRiego: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :RiegoModel.Hardware
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
