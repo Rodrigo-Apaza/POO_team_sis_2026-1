@@ -1,2 +1,0 @@
-C:\Users\LENOVO\source\repos\RiegoSolution\RiegoService\x64\Debug\RiegoService.vcxproj.AssemblyReference.cache
-C:\Users\LENOVO\source\repos\RiegoSolution\RiegoService\x64\Debug\RiegoSer.96DF5AB6.Up2Date
