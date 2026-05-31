@@ -132,6 +132,7 @@
     <ClCompile Include="PlantasForm.cpp" />
     <ClCompile Include="RiegoMainForm.cpp" />
     <ClCompile Include="SensorForm.cpp" />
+    <ClCompile Include="SensorTemperaturaForm.cpp" />
     <ClCompile Include="SueloForm.cpp" />
   </ItemGroup>
   <ItemGroup>

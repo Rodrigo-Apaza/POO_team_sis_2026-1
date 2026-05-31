@@ -1,2 +1,1 @@
-D:\Oscar\POO\POO_team_sis_2026-1-rama_Juan\POO_team_sis_2026-1-rama_Juan\RiegoModel\x64\Debug\RiegoModel.vcxproj.AssemblyReference.cache
-C:\Users\LENOVO\source\repos\RiegoSolution\RiegoModel\x64\Debug\RiegoModel.vcxproj.AssemblyReference.cache
+C:\Users\delta\Downloads\RiegoFull\RiegoModel\x64\Debug\RiegoModel.vcxproj.AssemblyReference.cache

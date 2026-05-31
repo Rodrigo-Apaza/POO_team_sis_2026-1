@@ -3,6 +3,7 @@
 #include "SueloForm.h"
 #include "DireccionForm.h"
 #include "SensorForm.h"
+#include "SensorTemperaturaForm.h"
 
 namespace RiegoGUIApp {
 
@@ -25,13 +26,13 @@ namespace RiegoGUIApp {
 		{
 			InitializeComponent();
 			//
-			//TODO: agregar código de constructor aquí
+			//TODO: agregar cÃ³digo de constructor aquÃ­
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// Limpiar los recursos que se estén usando.
+		/// Limpiar los recursos que se estÃ©n usando.
 		/// </summary>
 		~RiegoMainForm()
 		{
@@ -50,17 +51,19 @@ namespace RiegoGUIApp {
 	private: System::Windows::Forms::ToolStripMenuItem^ direccionToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ usuariosToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ sensoresToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ sensoresHumedadToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ sensoresTemperaturaToolStripMenuItem;
 
 	private:
 		/// <summary>
-		/// Variable del diseñador necesaria.
+		/// Variable del diseÃ±ador necesaria.
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Método necesario para admitir el Diseñador. No se puede modificar
-		/// el contenido de este método con el editor de código.
+		/// MÃ©todo necesario para admitir el DiseÃ±ador. No se puede modificar
+		/// el contenido de este mÃ©todo con el editor de cÃ³digo.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -73,6 +76,8 @@ namespace RiegoGUIApp {
 			this->direccionToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->usuariosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->sensoresToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->sensoresHumedadToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->sensoresTemperaturaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -143,10 +148,26 @@ namespace RiegoGUIApp {
 			// 
 			// sensoresToolStripMenuItem
 			// 
+			this->sensoresToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^ >(2) {
+				this->sensoresHumedadToolStripMenuItem, this->sensoresTemperaturaToolStripMenuItem
+			});
 			this->sensoresToolStripMenuItem->Name = L"sensoresToolStripMenuItem";
 			this->sensoresToolStripMenuItem->Size = System::Drawing::Size(224, 26);
 			this->sensoresToolStripMenuItem->Text = L"Sensores";
-			this->sensoresToolStripMenuItem->Click += gcnew System::EventHandler(this, &RiegoMainForm::sensoresToolStripMenuItem_Click);
+			// 
+			// sensoresHumedadToolStripMenuItem
+			// 
+			this->sensoresHumedadToolStripMenuItem->Name = L"sensoresHumedadToolStripMenuItem";
+			this->sensoresHumedadToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->sensoresHumedadToolStripMenuItem->Text = L"Sensores de Humedad";
+			this->sensoresHumedadToolStripMenuItem->Click += gcnew System::EventHandler(this, &RiegoMainForm::sensoresHumedadToolStripMenuItem_Click);
+			// 
+			// sensoresTemperaturaToolStripMenuItem
+			// 
+			this->sensoresTemperaturaToolStripMenuItem->Name = L"sensoresTemperaturaToolStripMenuItem";
+			this->sensoresTemperaturaToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->sensoresTemperaturaToolStripMenuItem->Text = L"Sensores de Temperatura";
+			this->sensoresTemperaturaToolStripMenuItem->Click += gcnew System::EventHandler(this, &RiegoMainForm::sensoresTemperaturaToolStripMenuItem_Click);
 			// 
 			// RiegoMainForm
 			// 
@@ -187,10 +208,15 @@ private: System::Void direccionToolStripMenuItem_Click(System::Object^ sender, S
 
 	direccionForm->Show();
 }
-private: System::Void sensoresToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-	SensorForm^ sensorForm = gcnew SensorForm();
 
+private: System::Void sensoresHumedadToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	SensorForm^ sensorForm = gcnew SensorForm();
 	sensorForm->Show();
 }
+private: System::Void sensoresTemperaturaToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	SensorTemperaturaForm^ sensorTempForm = gcnew SensorTemperaturaForm();
+	sensorTempForm->Show();
+}
+
 };
 }

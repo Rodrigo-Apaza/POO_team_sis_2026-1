@@ -1,9 +1,9 @@
 ImageRuntimeVersion: v4.0.30319
-Assembly RiegoPersistance, Version=1.0.*, Culture=Todos los idiomas (todos los países): 
+Assembly RiegoPersistance, Version=1.0.*, Culture=Invariante Sprache (Invariantes Land): 
 	hash=SHA1, flags=PublicKey
 Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
-Assembly RiegoModel, Version=1.0.*, Culture=Todos los idiomas (todos los países): 
+Assembly RiegoModel, Version=1.0.*, Culture=Invariante Sprache (Invariantes Land): 
 	hash=None, flags=None
 Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
@@ -15,6 +15,8 @@ Class RiegoPersistance.Persistance: AutoLayout, AnsiClass, Class, Public, Before
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     System.String plantstxtfileName : Public, Static
+    System.String sensorHumFileName : Public, Static
+    System.String sensorTempFileName : Public, Static
   Methods:
     AddPlanta(Plantas): PrivateScope, Public, Static, HideBySig
     UpdatePlanta(Plantas): PrivateScope, Public, Static, HideBySig
@@ -31,3 +33,13 @@ Class RiegoPersistance.Persistance: AutoLayout, AnsiClass, Class, Public, Before
     QuerySueloById(Int32): PrivateScope, Public, Static, HideBySig
     UpdateSuelo(Suelo): PrivateScope, Public, Static, HideBySig
     DeleteSuelo(Int32): PrivateScope, Public, Static, HideBySig
+    SaveSensorHumedad(SensorHumedad): PrivateScope, Public, Static, HideBySig
+    LoadSensorHumedad(): PrivateScope, Public, Static, HideBySig
+    QuerySensorHumedadById(Int32): PrivateScope, Public, Static, HideBySig
+    UpdateSensorHumedad(SensorHumedad): PrivateScope, Public, Static, HideBySig
+    DeleteSensorHumedad(Int32): PrivateScope, Public, Static, HideBySig
+    SaveSensorTemperatura(SensorTemperatura): PrivateScope, Public, Static, HideBySig
+    LoadSensorTemperatura(): PrivateScope, Public, Static, HideBySig
+    QuerySensorTemperaturaById(Int32): PrivateScope, Public, Static, HideBySig
+    UpdateSensorTemperatura(SensorTemperatura): PrivateScope, Public, Static, HideBySig
+    DeleteSensorTemperatura(Int32): PrivateScope, Public, Static, HideBySig

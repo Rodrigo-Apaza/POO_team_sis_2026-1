@@ -1,11 +1,11 @@
 ImageRuntimeVersion: v4.0.30319
-Assembly RiegoService, Version=1.0.*, Culture=Todos los idiomas (todos los países): 
+Assembly RiegoService, Version=1.0.*, Culture=Invariante Sprache (Invariantes Land): 
 	hash=SHA1, flags=PublicKey
 Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
-Assembly RiegoModel, Version=1.0.*, Culture=Todos los idiomas (todos los países): 
+Assembly RiegoModel, Version=1.0.*, Culture=Invariante Sprache (Invariantes Land): 
 	hash=None, flags=None
-Assembly RiegoPersistance, Version=1.0.*, Culture=Todos los idiomas (todos los países): 
+Assembly RiegoPersistance, Version=1.0.*, Culture=Invariante Sprache (Invariantes Land): 
 	hash=None, flags=None
 Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
@@ -31,3 +31,13 @@ Class RiegoService.Service: AutoLayout, AnsiClass, Class, Public, BeforeFieldIni
     DeletePlanta(Int32): PrivateScope, Public, Static, HideBySig
     QueryAllPlantas(): PrivateScope, Public, Static, HideBySig
     QuerPlantaById(Int32): PrivateScope, Public, Static, HideBySig
+    AddSensorHumedad(SensorHumedad): PrivateScope, Public, Static, HideBySig
+    GetAllSensorHumedad(): PrivateScope, Public, Static, HideBySig
+    GetSensorHumedadById(Int32): PrivateScope, Public, Static, HideBySig
+    UpdateSensorHumedad(SensorHumedad): PrivateScope, Public, Static, HideBySig
+    DeleteSensorHumedad(Int32): PrivateScope, Public, Static, HideBySig
+    AddSensorTemperatura(SensorTemperatura): PrivateScope, Public, Static, HideBySig
+    GetAllSensorTemperatura(): PrivateScope, Public, Static, HideBySig
+    GetSensorTemperaturaById(Int32): PrivateScope, Public, Static, HideBySig
+    UpdateSensorTemperatura(SensorTemperatura): PrivateScope, Public, Static, HideBySig
+    DeleteSensorTemperatura(Int32): PrivateScope, Public, Static, HideBySig

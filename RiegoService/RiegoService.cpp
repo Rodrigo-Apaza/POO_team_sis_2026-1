@@ -1,11 +1,11 @@
 #include "pch.h"
 
 #include "RiegoService.h"
-//DEFINICÕ”N DE M…TODOS USADOS EN M…TODOS CRUD PARA PLANTAS 
+//DEFINIC√ç√ìN DE M√âTODOS USADOS EN M√âTODOS CRUD PARA PLANTAS 
 
 
 
-//DEFINICÕ”N DE M…TODOS USADOS EN M…TODOS CRUD PARA USERS
+//DEFINIC√ç√ìN DE M√âTODOS USADOS EN M√âTODOS CRUD PARA USERS
 
 int RiegoService::Service::AddUser(user^ User) {
 	return Persistance::SaveUser(User);
@@ -29,7 +29,7 @@ int RiegoService::Service::DeleteUser(int userId) {
 
 
 
-//DEFINICÕ”N DE M…TODOS USADOS EN M…TODOS CRUD PARA SUELOS
+//DEFINIC√ç√ìN DE M√âTODOS USADOS EN M√âTODOS CRUD PARA SUELOS
 
 int RiegoService::Service::AddSuelo(Suelo^ suelo)
 {
@@ -84,6 +84,56 @@ Plantas^ RiegoService::Service::QuerPlantaById(int PlantasId)
 }
 
 
+//DEFINICION DE METODOS CRUD PARA SENSOR HUMEDAD
 
+int RiegoService::Service::AddSensorHumedad(SensorHumedad^ sensor)
+{
+	return Persistance::SaveSensorHumedad(sensor);
+}
 
+List<SensorHumedad^>^ RiegoService::Service::GetAllSensorHumedad()
+{
+	return Persistance::LoadSensorHumedad();
+}
 
+SensorHumedad^ RiegoService::Service::GetSensorHumedadById(int id)
+{
+	return Persistance::QuerySensorHumedadById(id);
+}
+
+int RiegoService::Service::UpdateSensorHumedad(SensorHumedad^ updatedSensor)
+{
+	return Persistance::UpdateSensorHumedad(updatedSensor);
+}
+
+int RiegoService::Service::DeleteSensorHumedad(int id)
+{
+	return Persistance::DeleteSensorHumedad(id);
+}
+
+//DEFINICION DE METODOS CRUD PARA SENSOR TEMPERATURA
+
+int RiegoService::Service::AddSensorTemperatura(SensorTemperatura^ sensor)
+{
+	return Persistance::SaveSensorTemperatura(sensor);
+}
+
+List<SensorTemperatura^>^ RiegoService::Service::GetAllSensorTemperatura()
+{
+	return Persistance::LoadSensorTemperatura();
+}
+
+SensorTemperatura^ RiegoService::Service::GetSensorTemperaturaById(int id)
+{
+	return Persistance::QuerySensorTemperaturaById(id);
+}
+
+int RiegoService::Service::UpdateSensorTemperatura(SensorTemperatura^ updatedSensor)
+{
+	return Persistance::UpdateSensorTemperatura(updatedSensor);
+}
+
+int RiegoService::Service::DeleteSensorTemperatura(int id)
+{
+	return Persistance::DeleteSensorTemperatura(id);
+}

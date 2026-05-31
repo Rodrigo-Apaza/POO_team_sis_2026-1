@@ -2,13 +2,13 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\LENOVO\source\repos\RiegoSolution\x64\Debug\RiegoModel.dll</FullPath>
+      <FullPath>C:\Users\delta\Downloads\RiegoFull\x64\Debug\RiegoModel.dll</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\LENOVO\source\repos\RiegoSolution\x64\Debug\RiegoPersistance.dll</FullPath>
+      <FullPath>C:\Users\delta\Downloads\RiegoFull\x64\Debug\RiegoPersistance.dll</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\LENOVO\source\repos\RiegoSolution\x64\Debug\RiegoService.dll</FullPath>
+      <FullPath>C:\Users\delta\Downloads\RiegoFull\x64\Debug\RiegoService.dll</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ArrayOfSensorHumedad xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SensorHumedad>
+    <UltimoRegistro>2026-06-01T01:10:48.072919+02:00</UltimoRegistro>
+    <EstadoOperacional>Inactivo</EstadoOperacional>
+    <Modelo>asdasd</Modelo>
+    <Numero>100</Numero>
+    <Id>1</Id>
+  </SensorHumedad>
+</ArrayOfSensorHumedad>

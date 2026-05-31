@@ -4,13 +4,13 @@
   RiegoGUIApp.SensorForm.resources - Embedded, ContainedInManifestFile, 
   RiegoGUIApp.SueloForm.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
-Assembly RiegoGUIApp, Version=0.0.*, Culture=Todos los idiomas (todos los países): 
+Assembly RiegoGUIApp, Version=0.0.*, Culture=Invariante Sprache (Invariantes Land): 
 	hash=SHA1, flags=PublicKey
 Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
-Assembly RiegoModel, Version=1.0.*, Culture=Todos los idiomas (todos los países): 
+Assembly RiegoModel, Version=1.0.*, Culture=Invariante Sprache (Invariantes Land): 
 	hash=None, flags=None
-Assembly RiegoService, Version=1.0.*, Culture=Todos los idiomas (todos los países): 
+Assembly RiegoService, Version=1.0.*, Culture=Invariante Sprache (Invariantes Land): 
 	hash=None, flags=None
 Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
@@ -32,6 +32,9 @@ Class RiegoGUIApp.PlantasForm: AutoLayout, AnsiClass, Class, Public, BeforeField
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class RiegoGUIApp.SensorForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class RiegoGUIApp.SensorTemperaturaForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class RiegoGUIApp.RiegoMainForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit

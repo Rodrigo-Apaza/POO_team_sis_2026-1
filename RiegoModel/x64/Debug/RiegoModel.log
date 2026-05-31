@@ -11,12 +11,13 @@
   RegistroActividad.cpp
   RiegoModel.cpp
   SensorHumedad.cpp
+  SensorTemperatura.cpp
   Suelo.cpp
   Supervisor.cpp
   user.cpp
   ValvulaRiego.cpp
   Direccion.cpp
-  Generando código...
+  Code wird generiert...
   .NETFramework,Version=v4.8.AssemblyAttributes.cpp
-  Administrador.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
-  RiegoModel.vcxproj -> C:\Users\LENOVO\source\repos\RiegoSolution\x64\Debug\RiegoModel.dll
+  Administrador.obj : MSIL-Modulgefunden; inkrementelles Verknüpfen wird für MSIL deaktiviert; vollständiger Link wird durchgeführt
+  RiegoModel.vcxproj -> C:\Users\delta\Downloads\RiegoFull\x64\Debug\RiegoModel.dll

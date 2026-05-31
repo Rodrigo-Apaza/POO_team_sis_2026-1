@@ -2,8 +2,9 @@
   PlantasForm.cpp
   RiegoMainForm.cpp
   SensorForm.cpp
+  SensorTemperaturaForm.cpp
   SueloForm.cpp
   .NETFramework,Version=v4.8.AssemblyAttributes.cpp
-  Generando código...
-  DireccionForm.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
-  RiegoGUIApp.vcxproj -> C:\Users\LENOVO\source\repos\RiegoSolution\x64\Debug\RiegoGUIApp.exe
+  Code wird generiert...
+  DireccionForm.obj : MSIL-Modulgefunden; inkrementelles Verknüpfen wird für MSIL deaktiviert; vollständiger Link wird durchgeführt
+  RiegoGUIApp.vcxproj -> C:\Users\delta\Downloads\RiegoFull\x64\Debug\RiegoGUIApp.exe

@@ -17,14 +17,14 @@ void RiegoPersistance::Persistance::PersistTextFile(String^ plantstxtfileName, L
 	try {
 		file = gcnew FileStream(plantstxtfileName, FileMode::Create, FileAccess::Write);
 		writer = gcnew StreamWriter(file);
-		// aqui se añaden los datos de cada plato, es un string normal pero lo que se escribe en el esta separado por |
+		// aqui se aÃ±aden los datos de cada plato, es un string normal pero lo que se escribe en el esta separado por |
 		for each (Plantas ^ Plantas in plantasDB) {
 			writer->WriteLine("{0}|{1}|{2}|{3}|{4}",
 				Plantas->Id, Plantas->plantname, Plantas->optimalHumidity, Plantas->optimalTemp, Plantas->Status);
 		}
 	}
-	catch (Exception^ ex) {
-		throw ex;
+	catch (Exception^) {
+		throw;
 	}
 	finally {
 		//Sirve para liberar memoria
@@ -60,13 +60,13 @@ Object^ RiegoPersistance::Persistance::LoadPlantasFromTextFile(String^ plantstxt
 			Plantas->optimalHumidity = Convert::ToDouble(record[2]);
 			Plantas->optimalTemp = Convert::ToDouble(record[3]);
 			Plantas->Status = (record[4]);
-			//Añadimos este nuevo dish creado a la lista de dishes
+			//AÃ±adimos este nuevo dish creado a la lista de dishes
 			//Tenemos q castear porque result es un objeto y como tal no posee la caracterisitca Add propia de una lista
 			((List<RiegoModel::Plantas^>^)result)->Add(Plantas);
 		}
 	}
-	catch (Exception^ ex) {
-		throw ex;
+	catch (Exception^) {
+		throw;
 	}
 	// Igual que en el anterior lo hacemos para guardar memoria, procedimiento correcto
 	finally {
@@ -146,14 +146,14 @@ Plantas^ RiegoPersistance::Persistance::QuerPlantaById(int PlantasId)
 
 }
 
-//DEFINICIÓN DE MÉTODOS DECLARADOS EN RiegoPersistance.h PARA USERS
+//DEFINICIÃ“N DE MÃ‰TODOS DECLARADOS EN RiegoPersistance.h PARA USERS
 
 int RiegoPersistance::Persistance::SaveUser(user^ user) {
 	try {
 		usersDB->Add(user);
 		return 1;
 	}
-	catch (Exception^ ex) {
+	catch (Exception^) {
 		return 0;
 	}
 }
@@ -196,7 +196,7 @@ int RiegoPersistance::Persistance::DeleteUser(int userId) {
 
 
 
-//DEFINICIÓN DE MÉTODOS DECLARADOS EN RiegoPersistance.h PARA SUELO
+//DEFINICIÃ“N DE MÃ‰TODOS DECLARADOS EN RiegoPersistance.h PARA SUELO
 
 
 int RiegoPersistance::Persistance::SaveSuelo(Suelo^ suelo)
@@ -205,7 +205,7 @@ int RiegoPersistance::Persistance::SaveSuelo(Suelo^ suelo)
 		sueloDB->Add(suelo);
 		return 1;
 	}
-	catch (Exception^ ex) {
+	catch (Exception^) {
 		return 0;
 	}
 	return 0;
@@ -248,6 +248,178 @@ int RiegoPersistance::Persistance::DeleteSuelo(int sueloId)
 		if (suelo->Id == sueloId)
 		{
 			sueloDB->Remove(suelo);
+			return 1;
+		}
+	}
+	return 0;
+}
+
+
+//DEFINICION DE METODOS CRUD PARA SENSOR HUMEDAD (persistencia XML)
+
+void RiegoPersistance::Persistance::PersistSensorHumXml(String^ fileName, List<SensorHumedad^>^ db)
+{
+	FileStream^ file = nullptr;
+	try {
+		file = gcnew FileStream(fileName, FileMode::Create, FileAccess::Write);
+		XmlSerializer^ serializer = gcnew XmlSerializer(db->GetType());
+		serializer->Serialize(file, db);
+	}
+	catch (Exception^) { throw; }
+	finally { if (file != nullptr) file->Close(); }
+}
+
+List<SensorHumedad^>^ RiegoPersistance::Persistance::LoadSensorHumFromXml(String^ fileName)
+{
+	if (!File::Exists(fileName))
+		return gcnew List<SensorHumedad^>();
+	FileStream^ file = nullptr;
+	try {
+		file = gcnew FileStream(fileName, FileMode::Open, FileAccess::Read);
+		XmlSerializer^ serializer = gcnew XmlSerializer(List<SensorHumedad^>::typeid);
+		return (List<SensorHumedad^>^)serializer->Deserialize(file);
+	}
+	catch (Exception^) { return gcnew List<SensorHumedad^>(); }
+	finally { if (file != nullptr) file->Close(); }
+}
+
+int RiegoPersistance::Persistance::SaveSensorHumedad(SensorHumedad^ sensor)
+{
+	try {
+		sensorHumDB = LoadSensorHumFromXml(sensorHumFileName);
+		sensorHumDB->Add(sensor);
+		PersistSensorHumXml(sensorHumFileName, sensorHumDB);
+		return 1;
+	}
+	catch (Exception^) { return 0; }
+}
+
+List<SensorHumedad^>^ RiegoPersistance::Persistance::LoadSensorHumedad()
+{
+	sensorHumDB = LoadSensorHumFromXml(sensorHumFileName);
+	return sensorHumDB;
+}
+
+SensorHumedad^ RiegoPersistance::Persistance::QuerySensorHumedadById(int id)
+{
+	sensorHumDB = LoadSensorHumFromXml(sensorHumFileName);
+	for each (SensorHumedad^ s in sensorHumDB) {
+		if (s->Id == id) return s;
+	}
+	return nullptr;
+}
+
+int RiegoPersistance::Persistance::UpdateSensorHumedad(SensorHumedad^ updatedSensor)
+{
+	sensorHumDB = LoadSensorHumFromXml(sensorHumFileName);
+	for (int i = 0; i < sensorHumDB->Count; i++) {
+		if (sensorHumDB[i]->Id == updatedSensor->Id) {
+			sensorHumDB[i] = updatedSensor;
+			PersistSensorHumXml(sensorHumFileName, sensorHumDB);
+			return 1;
+		}
+	}
+	return 0;
+}
+
+int RiegoPersistance::Persistance::DeleteSensorHumedad(int id)
+{
+	sensorHumDB = LoadSensorHumFromXml(sensorHumFileName);
+	for each (SensorHumedad^ s in sensorHumDB) {
+		if (s->Id == id) {
+			sensorHumDB->Remove(s);
+			PersistSensorHumXml(sensorHumFileName, sensorHumDB);
+			return 1;
+		}
+	}
+	return 0;
+}
+
+//DEFINICION DE METODOS CRUD PARA SENSOR TEMPERATURA (persistencia XML)
+
+void RiegoPersistance::Persistance::PersistSensorTempXml(String^ fileName, List<SensorTemperatura^>^ db)
+{
+	FileStream^ file = nullptr;
+	try {
+		file = gcnew FileStream(fileName, FileMode::Create, FileAccess::Write);
+		XmlSerializer^ serializer = gcnew XmlSerializer(db->GetType());
+		serializer->Serialize(file, db);
+	}
+	catch (Exception^) {
+		throw;
+	}
+	finally {
+		if (file != nullptr) file->Close();
+	}
+}
+
+List<SensorTemperatura^>^ RiegoPersistance::Persistance::LoadSensorTempFromXml(String^ fileName)
+{
+	if (!File::Exists(fileName))
+		return gcnew List<SensorTemperatura^>();
+	FileStream^ file = nullptr;
+	try {
+		file = gcnew FileStream(fileName, FileMode::Open, FileAccess::Read);
+		XmlSerializer^ serializer = gcnew XmlSerializer(List<SensorTemperatura^>::typeid);
+		return (List<SensorTemperatura^>^)serializer->Deserialize(file);
+	}
+	catch (Exception^) {
+		return gcnew List<SensorTemperatura^>();
+	}
+	finally {
+		if (file != nullptr) file->Close();
+	}
+}
+
+int RiegoPersistance::Persistance::SaveSensorTemperatura(SensorTemperatura^ sensor)
+{
+	try {
+		sensorTempDB = LoadSensorTempFromXml(sensorTempFileName);
+		sensorTempDB->Add(sensor);
+		PersistSensorTempXml(sensorTempFileName, sensorTempDB);
+		return 1;
+	}
+	catch (Exception^) {
+		return 0;
+	}
+}
+
+List<SensorTemperatura^>^ RiegoPersistance::Persistance::LoadSensorTemperatura()
+{
+	sensorTempDB = LoadSensorTempFromXml(sensorTempFileName);
+	return sensorTempDB;
+}
+
+SensorTemperatura^ RiegoPersistance::Persistance::QuerySensorTemperaturaById(int id)
+{
+	sensorTempDB = LoadSensorTempFromXml(sensorTempFileName);
+	for each (SensorTemperatura^ sensor in sensorTempDB) {
+		if (sensor->Id == id)
+			return sensor;
+	}
+	return nullptr;
+}
+
+int RiegoPersistance::Persistance::UpdateSensorTemperatura(SensorTemperatura^ updatedSensor)
+{
+	sensorTempDB = LoadSensorTempFromXml(sensorTempFileName);
+	for (int i = 0; i < sensorTempDB->Count; i++) {
+		if (sensorTempDB[i]->Id == updatedSensor->Id) {
+			sensorTempDB[i] = updatedSensor;
+			PersistSensorTempXml(sensorTempFileName, sensorTempDB);
+			return 1;
+		}
+	}
+	return 0;
+}
+
+int RiegoPersistance::Persistance::DeleteSensorTemperatura(int id)
+{
+	sensorTempDB = LoadSensorTempFromXml(sensorTempFileName);
+	for each (SensorTemperatura^ sensor in sensorTempDB) {
+		if (sensor->Id == id) {
+			sensorTempDB->Remove(sensor);
+			PersistSensorTempXml(sensorTempFileName, sensorTempDB);
 			return 1;
 		}
 	}

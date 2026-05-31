@@ -133,6 +133,7 @@
     <ClInclude Include="Resource.h" />
     <ClInclude Include="RiegoModel.h" />
     <ClInclude Include="SensorHumedad.h" />
+    <ClInclude Include="SensorTemperatura.h" />
     <ClInclude Include="Supervisor.h" />
     <ClInclude Include="user.h" />
     <ClInclude Include="ValvulaRiego.h" />
@@ -157,6 +158,7 @@
     <ClCompile Include="RegistroActividad.cpp" />
     <ClCompile Include="RiegoModel.cpp" />
     <ClCompile Include="SensorHumedad.cpp" />
+    <ClCompile Include="SensorTemperatura.cpp" />
     <ClCompile Include="Suelo.cpp" />
     <ClCompile Include="Supervisor.cpp" />
     <ClCompile Include="user.cpp" />

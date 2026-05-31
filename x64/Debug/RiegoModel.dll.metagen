@@ -1,5 +1,5 @@
 ImageRuntimeVersion: v4.0.30319
-Assembly RiegoModel, Version=1.0.*, Culture=Todos los idiomas (todos los países): 
+Assembly RiegoModel, Version=1.0.*, Culture=Invariante Sprache (Invariantes Land): 
 	hash=SHA1, flags=PublicKey
 Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
@@ -119,6 +119,43 @@ Class RiegoModel.Class1: AutoLayout, AnsiClass, Class, Public, Serializable, Bef
 Class RiegoModel.SensorHumedad: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
   :RiegoModel.Hardware
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.DateTime UltimoRegistro 'get set' : 
+    System.String EstadoOperacional 'get set' : 
+    System.String Modelo 'get set' : 
+    Int32 Numero 'get set' : 
+    Int32 Id   'get set' : 
+  Methods:
+    get_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Id(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Numero(): PrivateScope, Public, HideBySig, SpecialName
+    set_Numero(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Modelo(): PrivateScope, Public, HideBySig, SpecialName
+    set_Modelo(String): PrivateScope, Public, HideBySig, SpecialName
+    get_EstadoOperacional(): PrivateScope, Public, HideBySig, SpecialName
+    set_EstadoOperacional(String): PrivateScope, Public, HideBySig, SpecialName
+    get_UltimoRegistro(): PrivateScope, Public, HideBySig, SpecialName
+    set_UltimoRegistro(DateTime): PrivateScope, Public, HideBySig, SpecialName
+Class RiegoModel.SensorTemperatura: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :RiegoModel.Hardware
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.DateTime UltimoRegistro 'get set' : 
+    System.String EstadoOperacional 'get set' : 
+    System.String Modelo 'get set' : 
+    Int32 Numero 'get set' : 
+    Int32 Id   'get set' : 
+  Methods:
+    get_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Id(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Numero(): PrivateScope, Public, HideBySig, SpecialName
+    set_Numero(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Modelo(): PrivateScope, Public, HideBySig, SpecialName
+    set_Modelo(String): PrivateScope, Public, HideBySig, SpecialName
+    get_EstadoOperacional(): PrivateScope, Public, HideBySig, SpecialName
+    set_EstadoOperacional(String): PrivateScope, Public, HideBySig, SpecialName
+    get_UltimoRegistro(): PrivateScope, Public, HideBySig, SpecialName
+    set_UltimoRegistro(DateTime): PrivateScope, Public, HideBySig, SpecialName
 Class RiegoModel.ValvulaRiego: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
   :RiegoModel.Hardware
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

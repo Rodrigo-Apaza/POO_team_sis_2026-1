@@ -19,13 +19,13 @@ namespace RiegoGUIApp {
 		{
 			InitializeComponent();
 			//
-			//TODO: agregar código de constructor aquí
+			//TODO: agregar cÃ³digo de constructor aquÃ­
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// Limpiar los recursos que se estén usando.
+		/// Limpiar los recursos que se estÃ©n usando.
 		/// </summary>
 		~SensorForm()
 		{
@@ -39,8 +39,10 @@ namespace RiegoGUIApp {
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::TextBox^ txtIdDispositivo;
 	private: System::Windows::Forms::TextBox^ txtModelo;
+	private: System::Windows::Forms::TextBox^ txtNumero;
 
 
 	private: System::Windows::Forms::ComboBox^ cmbEstado;
@@ -52,22 +54,34 @@ namespace RiegoGUIApp {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Modelo;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Estado_Operacional;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Ultima_Prueba;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ colNumero;
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Button^ button3;
+	private: System::Windows::Forms::Button^ button4;
 
 
 
 	private:
 		/// <summary>
-		/// Variable del diseñador necesaria.
+		/// Variable del diseÃ±ador necesaria.
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
+private:
+		void LoadGrid();
+		System::Void SensorForm_Load(System::Object^ sender, System::EventArgs^ e);
+		System::Void label1_Click(System::Object^ sender, System::EventArgs^ e);
+		System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
+		System::Void button2_Click(System::Object^ sender, System::EventArgs^ e);
+		System::Void button3_Click(System::Object^ sender, System::EventArgs^ e);
+		System::Void dataGridViewSensor_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e);
+		System::Void button4_Click(System::Object^ sender, System::EventArgs^ e);
+
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Método necesario para admitir el Diseñador. No se puede modificar
-		/// el contenido de este método con el editor de código.
+		/// MÃ©todo necesario para admitir el DiseÃ±ador. No se puede modificar
+		/// el contenido de este mÃ©todo con el editor de cÃ³digo.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -77,6 +91,9 @@ namespace RiegoGUIApp {
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->txtIdDispositivo = (gcnew System::Windows::Forms::TextBox());
 			this->txtModelo = (gcnew System::Windows::Forms::TextBox());
+			this->txtNumero = (gcnew System::Windows::Forms::TextBox());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->colNumero = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->cmbEstado = (gcnew System::Windows::Forms::ComboBox());
 			this->dtpUltimaRespuesta = (gcnew System::Windows::Forms::DateTimePicker());
 			this->dataGridViewSensor = (gcnew System::Windows::Forms::DataGridView());
@@ -87,6 +104,7 @@ namespace RiegoGUIApp {
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->button4 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewSensor))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -119,6 +137,16 @@ namespace RiegoGUIApp {
 			this->label3->Text = L"Estado Operacional:";
 			// 
 			// label4
+			// 
+			// label5
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(35, 240);
+			this->label5->TabIndex = 12;
+			this->label5->Text = L"Numero:";
+			// txtNumero
+			this->txtNumero->Location = System::Drawing::Point(210, 240);
+			this->txtNumero->Size = System::Drawing::Size(111, 22);
+			this->txtNumero->TabIndex = 13;
 			// 
 			this->label4->AutoSize = true;
 			this->label4->Location = System::Drawing::Point(35, 192);
@@ -161,17 +189,17 @@ namespace RiegoGUIApp {
 			// dataGridViewSensor
 			// 
 			this->dataGridViewSensor->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridViewSensor->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
+			this->dataGridViewSensor->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {
 				this->IdDispositivo,
-					this->Modelo, this->Estado_Operacional, this->Ultima_Prueba
+					this->Modelo, this->Estado_Operacional, this->Ultima_Prueba, this->colNumero
 			});
-			this->dataGridViewSensor->Location = System::Drawing::Point(51, 250);
+			this->dataGridViewSensor->Location = System::Drawing::Point(51, 300);
 			this->dataGridViewSensor->Name = L"dataGridViewSensor";
 			this->dataGridViewSensor->RowHeadersWidth = 51;
 			this->dataGridViewSensor->RowTemplate->Height = 24;
 			this->dataGridViewSensor->Size = System::Drawing::Size(769, 273);
 			this->dataGridViewSensor->TabIndex = 8;
-			this->dataGridViewSensor->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &SensorForm::dataGridViewSensor_CellContentClick);
+			this->dataGridViewSensor->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &SensorForm::dataGridViewSensor_CellContentClick);
 			// 
 			// IdDispositivo
 			// 
@@ -198,8 +226,25 @@ namespace RiegoGUIApp {
 			// 
 			this->Ultima_Prueba->HeaderText = L"Ultima_Prueba";
 			this->Ultima_Prueba->MinimumWidth = 6;
+			this->Ultima_Prueba->Width = 125;
+			// colNumero
+			this->colNumero->HeaderText = L"Numero";
+			this->colNumero->MinimumWidth = 6;
+			this->colNumero->Name = L"colNumero";
+			this->colNumero->Width = 80;
+			this->Ultima_Prueba->MinimumWidth = 6;
 			this->Ultima_Prueba->Name = L"Ultima_Prueba";
 			this->Ultima_Prueba->Width = 125;
+			// 
+			// button4
+			// 
+			this->button4->Location = System::Drawing::Point(480, 554);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(75, 23);
+			this->button4->TabIndex = 12;
+			this->button4->Text = L"Limpiar";
+			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &SensorForm::button4_Click);
 			// 
 			// button1
 			// 
@@ -235,7 +280,8 @@ namespace RiegoGUIApp {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(948, 589);
+			this->ClientSize = System::Drawing::Size(948, 620);
+			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
@@ -243,76 +289,21 @@ namespace RiegoGUIApp {
 			this->Controls->Add(this->dtpUltimaRespuesta);
 			this->Controls->Add(this->cmbEstado);
 			this->Controls->Add(this->txtModelo);
+			this->Controls->Add(this->txtNumero);
+			this->Controls->Add(this->label5);
 			this->Controls->Add(this->txtIdDispositivo);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Name = L"SensorForm";
-			this->Text = L"SensorForm";
+			this->Text = L"Sensores de Humedad";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridViewSensor))->EndInit();
+			this->Load += gcnew System::EventHandler(this, &SensorForm::SensorForm_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
-	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void dateTimePicker1_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
-	}
-private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	// Validación
-	if (cmbEstado->SelectedIndex == -1) {
-		MessageBox::Show("Seleccione el estado operacional");
-		return;
-	}
-
-	// Agregar fila
-	dataGridViewSensor->Rows->Add(
-		txtIdDispositivo->Text,
-		txtModelo->Text,
-		cmbEstado->SelectedItem->ToString(),
-		dtpUltimaRespuesta->Value.ToShortDateString()
-	);
-
-	// Limpiar campos
-	txtIdDispositivo->Clear();
-	txtModelo->Clear();
-	cmbEstado->SelectedIndex = -1;
-}
-private: System::Void dataGridViewSensor_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-
-	if (e->RowIndex >= 0) {
-
-		DataGridViewRow^ fila = dataGridViewSensor->Rows[e->RowIndex];
-
-		txtIdDispositivo->Text = fila->Cells[0]->Value->ToString();
-		txtModelo->Text = fila->Cells[1]->Value->ToString();
-		cmbEstado->SelectedItem = fila->Cells[2]->Value->ToString();
-		dtpUltimaRespuesta->Value = Convert::ToDateTime(fila->Cells[3]->Value);
-	}
-}
-private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	// Validación
-	if (dataGridViewSensor->CurrentRow == nullptr) {
-		MessageBox::Show("Seleccione una fila");
-		return;
-	}
-
-	DataGridViewRow^ fila = dataGridViewSensor->CurrentRow;
-
-	fila->Cells[0]->Value = txtIdDispositivo->Text;
-	fila->Cells[1]->Value = txtModelo->Text;
-	fila->Cells[2]->Value = cmbEstado->SelectedItem->ToString();
-	fila->Cells[3]->Value = dtpUltimaRespuesta->Value.ToShortDateString();
-}
-private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (dataGridViewSensor->CurrentRow == nullptr) {
-		MessageBox::Show("Seleccione una fila");
-		return;
-	}
-
-	dataGridViewSensor->Rows->Remove(dataGridViewSensor->CurrentRow);
-}
-};
+	};
 }
